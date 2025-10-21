@@ -196,16 +196,10 @@ If you want, I can:
 Tell me which you'd prefer and I can generate the patch.
 
 ---
+Author: Cláudio Bento Dala
+---
 
 ## License
 Add your license here (e.g. MIT). Example:
 
-MIT © Claudio Bento Dala Dev
-
----
-
-If you'd like, I can produce a polished PR/commit with:
-- README.md file added,
-- suggested code refactor,
-- unit tests (Jest),
-- and a small changelog entry. Which should I do next?
+MIT ©claudiobentodaladev
