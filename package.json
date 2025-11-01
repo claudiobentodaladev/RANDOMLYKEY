@@ -1,6 +1,6 @@
 {
   "name": "randomlykey",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "javascript library to generate random numbers, letters, special character and with min/max range control",
   "main": "randomly.js",
   "scripts": {
@@ -12,7 +12,11 @@
   },
   "keywords": [
     "random",
-    "key"
+    "range",
+    "key",
+    "boolean",
+    "string",
+    "number"
   ],
   "author": "claudiobentodala",
   "license": "ISC",
