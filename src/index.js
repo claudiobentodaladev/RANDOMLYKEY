@@ -7,12 +7,12 @@ RANDOMLY is a library to get random number and string.
 export const randomly = {
     between: {
         number: (min, max) => {
-            min = Number(min) ; max = Number(max)
+            min = Number(min); max = Number(max)
             max++
             return Math.trunc(Math.random() * (max - min)) + min
         },
         string: (min, max) => {
-            min = String(min) ; max = String(max)
+            min = String(min); max = String(max)
             min = alphabetToNumber(min); max = alphabetToNumber(max)
             return numberToAlfhabet(randomly.between.number(min, max))
         }
@@ -34,7 +34,7 @@ export const randomly = {
             const randomValue = []
             const randomString = to => {
                 for (let index = 0; index < to; index++) {
-                    randomValue[index] = numberToAlfhabet(randomly.between.number(1, 26))
+                    randomValue[index] = numberToAlfhabet(randomly.between.number(0, 25))
                 }
             }
             numbers ? randomString(numbers) : randomString(18)
@@ -55,7 +55,7 @@ export const randomly = {
             const randomValue = []
             const randomSpecialCharacter = to => {
                 for (let index = 0; index < to; index++) {
-                    randomValue[index] = numberToSpecialCharacter(randomly.between.number(0, 12))
+                    randomValue[index] = numberToSpecialCharacter(randomly.between.number(0, 8))
                 }
             }
             numbers ? randomSpecialCharacter(numbers) : randomSpecialCharacter(18)
@@ -88,152 +88,70 @@ export const randomly = {
 }
 
 function numberToAlfhabet(number) {
-    switch (number) {
-        case 1:
-            return 'a'
-        case 2:
-            return 'b'
-        case 3:
-            return 'c'
-        case 4:
-            return 'd'
-        case 5:
-            return 'e'
-        case 6:
-            return 'f'
-        case 7:
-            return 'g'
-        case 8:
-            return 'h'
-        case 9:
-            return 'i'
-        case 10:
-            return 'j'
-        case 11:
-            return 'k'
-        case 12:
-            return 'l'
-        case 13:
-            return 'm'
-        case 14:
-            return 'n'
-        case 15:
-            return 'o'
-        case 16:
-            return 'p'
-        case 17:
-            return 'q'
-        case 18:
-            return 'r'
-        case 19:
-            return 's'
-        case 20:
-            return 't'
-        case 21:
-            return 'u'
-        case 22:
-            return 'v'
-        case 23:
-            return 'w'
-        case 24:
-            return 'x'
-        case 25:
-            return 'y'
-        case 26:
-            return 'z'
-        default:
-            return undefined
-    }
+    const alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+    return alphabet[number]
 }
 
 function alphabetToNumber(alphabet) {
     switch (alphabet) {
         case 'a':
-            return 1
+            return 0
         case 'b':
-            return 2
+            return 1
         case 'c':
-            return 3
+            return 2
         case 'd':
-            return 4
+            return 3
         case 'e':
-            return 5
+            return 4
         case 'f':
-            return 6
+            return 5
         case 'g':
-            return 7
+            return 6
         case 'h':
-            return 8
+            return 7
         case 'i':
-            return 9
+            return 8
         case 'j':
-            return 10
+            return 9
         case 'k':
-            return 11
+            return 10
         case 'l':
-            return 12
+            return 11
         case 'm':
-            return 13
+            return 12
         case 'n':
-            return 14
+            return 13
         case 'o':
-            return 15
+            return 14
         case 'p':
-            return 16
+            return 15
         case 'q':
-            return 17
+            return 16
         case 'r':
-            return 18
+            return 17
         case 's':
-            return 19
+            return 18
         case 't':
-            return 20
+            return 29
         case 'u':
-            return 21
+            return 20
         case 'v':
-            return 22
+            return 21
         case 'w':
-            return 23
+            return 22
         case 'x':
-            return 24
+            return 23
         case 'y':
-            return 25
+            return 24
         case 'z':
-            return 26
+            return 25
         default:
             return undefined
     }
 }
 
 function numberToSpecialCharacter(index) {
-    switch (index) {
-        case 0:
-            return '$'
-        case 1:
-            return '@'
-        case 2:
-            return '#'
-        case 3:
-            return '£'
-        case 4:
-            return '$'
-        case 5:
-            return '§'
-        case 6:
-            return '%'
-        case 7:
-            return '&'
-        case 8:
-            return '?'
-        case 9:
-            return '+'
-        case 10:
-            return '*'
-        case 11:
-            return 'º'
-        case 12:
-            return 'ª'
-        default:
-            return index
-    }
+    const specialCharacters = ['$', '@', '#', '£', '§', '%', '&', '?']
+    return specialCharacters[index]
 }
