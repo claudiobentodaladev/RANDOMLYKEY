@@ -200,6 +200,5 @@ Author: Cláudio Bento Dala
 ---
 
 ## License
-Add your license here (e.g. MIT). Example:
 
 MIT ©claudiobentodaladev
