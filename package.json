@@ -4,7 +4,7 @@
   "description": "javascript library to generate random numbers, letters, special character and with min/max range control",
   "main": "randomly.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node src/index.js"
   },
   "repository": {
     "type": "git",
